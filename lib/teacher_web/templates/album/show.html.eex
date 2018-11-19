@@ -1,0 +1,28 @@
+<h2>Album Info</h2>
+<ul>
+  <li>
+    <strong>Title:</strong>
+    <%= @album.title %>
+  </li>
+
+  <li>
+    <strong>Summary:</strong>
+    <%= @album.summary %>
+  </li>
+
+  <li>
+    <strong>Year:</strong>
+    <%= @album.year %>
+  </li>
+
+  <li>
+    <strong>Popularity:</strong>
+    <%= popularity_as_percent(@album.popularity) %> of users like this album.
+  </li>
+
+  <li>
+    <strong>Price:</strong>
+    <%= cents_to_dollars(@album.price) %>
+  </li>
+</ul>
+<span><%= link "Back", to: Routes.album_path(@conn, :index) %></span>
